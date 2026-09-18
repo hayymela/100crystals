@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>角色图鉴 · 结晶百相</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-logo" onclick="location.href='index.html'">结晶百相<small>100 Crystals</small></div>
+  <div class="nav-links" id="navLinks">
+    <a class="nav-link" href="index.html">首页</a>
+    <a class="nav-link" href="novel.html">小说阅读</a>
+    <a class="nav-link" href="worldview.html">世界观百科</a>
+    <a class="nav-link active" href="characters.html">角色图鉴</a>
+    <a class="nav-link" href="geography.html">地理设定</a>
+    <a class="nav-link" href="factions.html">势力阵营</a>
+    <a class="nav-link" href="about.html">关于</a>
+  </div>
+  <div class="nav-search">
+    <span class="nav-search-icon">🔍</span>
+    <input type="text" id="navSearch" placeholder="搜索角色/地名/章节...">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+  <button class="theme-toggle" id="themeToggle">☾</button>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="main-content">
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">角色图鉴</h2>
+    <p class="section-subtitle">共24名角色，分阵营展示 · 点击卡片查看详情</p>
+  </div>
+
+  <!-- 筛选器 -->
+  <div class="filter-bar">
+    <div class="filter-group">
+      <span class="filter-label">阵营：</span>
+      <button class="filter-btn active" data-faction="all" onclick="filterCharacters('faction','all')">全部</button>
+      <button class="filter-btn" data-faction="miners" onclick="filterCharacters('faction','miners')">Miners</button>
+      <button class="filter-btn" data-faction="tenabirui" onclick="filterCharacters('faction','tenabirui')">特纳比睿</button>
+      <button class="filter-btn" data-faction="institute" onclick="filterCharacters('faction','institute')">地质学研究所</button>
+      <button class="filter-btn" data-faction="other" onclick="filterCharacters('faction','other')">其他</button>
+    </div>
+  </div>
+  <div class="filter-bar" style="margin-top:-8px;">
+    <div class="filter-group">
+      <span class="filter-label">共生物质：</span>
+      <button class="filter-btn active" data-material="all" onclick="filterCharacters('material','all')">全部</button>
+      <button class="filter-btn" data-material="天河石" onclick="filterCharacters('material','天河石')">天河石</button>
+      <button class="filter-btn" data-material="火药" onclick="filterCharacters('material','火药')">火药</button>
+      <button class="filter-btn" data-material="TNT" onclick="filterCharacters('material','TNT')">TNT</button>
+      <button class="filter-btn" data-material="硝化甘油" onclick="filterCharacters('material','硝化甘油')">硝化甘油</button>
+      <button class="filter-btn" data-material="铝" onclick="filterCharacters('material','铝')">铝</button>
+      <button class="filter-btn" data-material="镁" onclick="filterCharacters('material','镁')">镁</button>
+      <button class="filter-btn" data-material="液氮" onclick="filterCharacters('material','液氮')">液氮</button>
+      <button class="filter-btn" data-material="聚氨酯" onclick="filterCharacters('material','聚氨酯')">聚氨酯</button>
+      <button class="filter-btn" data-material="铀" onclick="filterCharacters('material','铀')">铀</button>
+      <button class="filter-btn" data-material="氯气" onclick="filterCharacters('material','氯气')">氯气</button>
+      <button class="filter-btn" data-material="石英" onclick="filterCharacters('material','石英')">石英</button>
+      <button class="filter-btn" data-material="烧碱" onclick="filterCharacters('material','烧碱')">烧碱</button>
+      <button class="filter-btn" data-material="珊瑚" onclick="filterCharacters('material','珊瑚')">珊瑚</button>
+      <button class="filter-btn" data-material="刚玉" onclick="filterCharacters('material','刚玉')">刚玉</button>
+      <button class="filter-btn" data-material="大理石" onclick="filterCharacters('material','大理石')">大理石</button>
+      <button class="filter-btn" data-material="石墨" onclick="filterCharacters('material','石墨')">石墨</button>
+      <button class="filter-btn" data-material="花岗岩" onclick="filterCharacters('material','花岗岩')">花岗岩</button>
+      <button class="filter-btn" data-material="滑石" onclick="filterCharacters('material','滑石')">滑石</button>
+      <button class="filter-btn" data-material="硫" onclick="filterCharacters('material','硫')">硫</button>
+      <button class="filter-btn" data-material="钛" onclick="filterCharacters('material','钛')">钛</button>
+      <button class="filter-btn" data-material="石棉" onclick="filterCharacters('material','石棉')">石棉</button>
+      <button class="filter-btn" data-material="铅钢" onclick="filterCharacters('material','铅钢')">铅钢</button>
+      <button class="filter-btn" data-material="银" onclick="filterCharacters('material','银')">银</button>
+    </div>
+  </div>
+
+  <!-- 角色卡片网格 -->
+  <div class="card-grid" id="charGrid" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr));">
+    <p style="color:var(--text-dim);">正在加载角色数据...</p>
+  </div>
+</section>
+</div>
+
+<!-- 角色详情弹窗 -->
+<div class="modal-overlay" id="charModal">
+  <div class="modal-content" style="position:relative;">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTop">↑</button>
+<script src="js/common.js"></script>
+<script src="js/characters.js"></script>
+</body>
+</html>

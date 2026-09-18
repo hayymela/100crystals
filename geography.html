@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>地理设定 · 结晶百相</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-logo" onclick="location.href='index.html'">结晶百相<small>100 Crystals</small></div>
+  <div class="nav-links" id="navLinks">
+    <a class="nav-link" href="index.html">首页</a>
+    <a class="nav-link" href="novel.html">小说阅读</a>
+    <a class="nav-link" href="worldview.html">世界观百科</a>
+    <a class="nav-link" href="characters.html">角色图鉴</a>
+    <a class="nav-link active" href="geography.html">地理设定</a>
+    <a class="nav-link" href="factions.html">势力阵营</a>
+    <a class="nav-link" href="about.html">关于</a>
+  </div>
+  <div class="nav-search">
+    <span class="nav-search-icon">🔍</span>
+    <input type="text" id="navSearch" placeholder="搜索角色/地名/章节...">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+  <button class="theme-toggle" id="themeToggle">☾</button>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="main-content">
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">地理设定</h2>
+    <p class="section-subtitle">两片大陆、亚特亚海、科麦尔岛 · 点击地图放大 · 点击城市查看详情</p>
+  </div>
+
+  <!-- 世界地图 -->
+  <div class="map-container" onclick="openLightbox('assets/maps/world_map.png','世界地图')">
+    <img class="map-img" src="assets/maps/world_map.png" alt="世界地图">
+    <div class="map-overlay"><span>📍 点击放大查看世界地图</span></div>
+  </div>
+
+  <!-- 大陆总览 -->
+  <div class="encyclopedia-section">
+    <h3>大陆总览</h3>
+    <p>目前世界已探明的陆地部分由两片大陆组成，率先迎来黎明的被称为"雷凯尼大陆"，另一片则被称为"塔加休大陆"。两片大陆各分布有一座延绵起伏的高山。两片大陆所围成的海称为亚特亚海。</p>
+  </div>
+
+  <!-- 雷凯尼大陆 -->
+  <div class="encyclopedia-section" style="border-left-color:var(--blue);">
+    <h3 style="color:var(--blue-light);">雷凯尼大陆</h3>
+    <p>率先迎来黎明的大陆。其上最高峰为奥西里火山，是一座活火山，附近出产色泽鲜艳的宝石。受火山影响，火山东部降水稀少变成最大的沙漠——桑多马沙漠。只有横穿沙漠的西斯南河两岸才有稀少的绿洲和人烟。</p>
+    <div class="geo-grid">
+      <div class="geo-card"><h4>奥西里火山</h4><p>雷凯尼大陆最高峰，活火山。附近出产的宝石经高温岩浆淬炼，色泽鲜艳夺目，晶莹剔透。</p></div>
+      <div class="geo-card"><h4>桑多马沙漠</h4><p>受火山影响形成的大沙漠。只有西斯南河两岸有稀少的绿洲和人烟。</p></div>
+      <div class="geo-card"><h4>西斯南河</h4><p>横穿沙漠的河流，两岸有绿洲。</p></div>
+      <div class="geo-card"><h4>蓬落科雨林</h4><p>地图标注的雨林区域。</p></div>
+    </div>
+  </div>
+
+  <!-- 塔加休大陆 -->
+  <div class="encyclopedia-section" style="border-left-color:var(--blue);">
+    <h3 style="color:var(--blue-light);">塔加休大陆</h3>
+    <p>另一片大陆。山顶永远覆盖着积雪的新卡吉纳峰是最高峰，比奥西里火山高出很多。雪山之下是盘旋交错的优质矿脉，提供了世界矿物总需求量的80%以上。雪山融水沿地下河汇聚，形成了最大的河流维托巴河以及其他数十条河流。</p>
+    <div class="geo-grid">
+      <div class="geo-card"><h4>新卡吉纳峰</h4><p>山顶永远覆盖积雪。雪山之下是优质矿脉，提供世界80%+矿物需求。融水形成河流。</p></div>
+      <div class="geo-card"><h4>维托巴河</h4><p>最大的河流，由新卡吉纳峰雪山融水汇聚形成。</p></div>
+    </div>
+  </div>
+
+  <!-- 亚特亚海 -->
+  <div class="encyclopedia-section" style="border-left-color:var(--blue);">
+    <h3 style="color:var(--blue-light);">亚特亚海</h3>
+    <p>两片大陆所围成的海。河流最终流入亚特亚海，并在海岸处形成了广袤的诺达尔平原，这片平原也是杜兰德尔最为发达的地区之一。</p>
+  </div>
+
+  <!-- 科麦尔岛 -->
+  <div class="encyclopedia-section">
+    <h3>科麦尔岛</h3>
+    <p>自从那颗陨石降落化身为岛之后，重返地表的人们都将这座岛视为灾厄的象征，以至于没人敢踏上那座岛屿半步。比桑尔城中还算富裕的奥瓦顿家族花重金在科麦尔岛上建起宅邸，并且举家搬迁到岛上。奥瓦顿家族发现可以将科麦尔岛上出产的矿石出售（纯度非常高），赚得盆满钵满。剩余的钱财大部分用来当作杜兰德尔统一这片大陆的后勤支援。作为交换条件，在科麦尔岛上建立一个只属于这个家族的城市，并由奥瓦顿家族实行自治。</p>
+  </div>
+
+  <!-- 城市简介 -->
+  <div class="encyclopedia-section">
+    <h3>城市简介（点击查看详情）</h3>
+    <div class="geo-grid" id="cityGrid">
+      <div class="geo-card" onclick="openCityModal('comale')"><h4>科麦尔城</h4><p>奥瓦顿家族建立，自治城市，科麦尔大学所在地。</p><p class="geo-card-en">Comale</p></div>
+      <div class="geo-card" onclick="openCityModal('besongr')"><h4>比桑尔城</h4><p>杜兰德尔发源地，奥瓦顿家族来自此城。</p><p class="geo-card-en">Besongr</p></div>
+      <div class="geo-card" onclick="openCityModal('gegoxa')"><h4>基戈萨港</h4><p>重工城市，核能发电厂，辐射区，特纳比睿势力。</p><p class="geo-card-en">Gegoxa</p></div>
+      <div class="geo-card" onclick="openCityModal('nhogetas')"><h4>南格塔斯</h4><p>游侠&灯塔驻扎地。</p><p class="geo-card-en">Nhogetas</p></div>
+      <div class="geo-card" onclick="openCityModal('sarvaniki')"><h4>萨尔凡尼基</h4><p>毒气烟尘覆盖，最终阵线控制区。</p><p class="geo-card-en">Sarvaniki</p></div>
+      <div class="geo-card" onclick="openCityModal('kevogelma')"><h4>凯各哥尔玛</h4><p>最北端城市，陨星生物最后出现地，边境之塔。</p><p class="geo-card-en">Kevogelma</p></div>
+      <div class="geo-card" onclick="openCityModal('bora')"><h4>博拉角</h4><p>海边城市，爆破&雷管驻扎地。</p><p class="geo-card-en">Bora</p></div>
+      <div class="geo-card" onclick="openCityModal('belid')"><h4>拜利德</h4><p>寒霜&泡沫、卡尔文&叶佩斯娅驻扎地。</p><p class="geo-card-en">Belid</p></div>
+      <div class="geo-card" onclick="openCityModal('selleja')"><h4>塞烈加</h4><p>皮纳瑞尔在此活动，中心医院。</p><p class="geo-card-en">Selleja</p></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- 城市弹窗 -->
+<div class="modal-overlay" id="cityModal">
+  <div class="modal-content" style="position:relative;max-width:480px;">
+    <button class="modal-close" onclick="closeCityModal()">✕</button>
+    <div class="modal-body">
+      <div class="modal-info">
+        <div class="modal-name" id="cityName"></div>
+        <p style="margin-top:12px;color:var(--text);line-height:1.8;" id="cityDesc"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTop">↑</button>
+<script src="js/common.js"></script>
+<script src="js/geography.js"></script>
+</body>
+</html>

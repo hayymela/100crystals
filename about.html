@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于 · 结晶百相</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-logo" onclick="location.href='index.html'">结晶百相<small>100 Crystals</small></div>
+  <div class="nav-links" id="navLinks">
+    <a class="nav-link" href="index.html">首页</a>
+    <a class="nav-link" href="novel.html">小说阅读</a>
+    <a class="nav-link" href="worldview.html">世界观百科</a>
+    <a class="nav-link" href="characters.html">角色图鉴</a>
+    <a class="nav-link" href="geography.html">地理设定</a>
+    <a class="nav-link" href="factions.html">势力阵营</a>
+    <a class="nav-link active" href="about.html">关于</a>
+  </div>
+  <div class="nav-search">
+    <span class="nav-search-icon">🔍</span>
+    <input type="text" id="navSearch" placeholder="搜索角色/地名/章节...">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+  <button class="theme-toggle" id="themeToggle">☾</button>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="main-content">
+<div class="about-content">
+  <div style="text-align:center;margin-bottom:40px;">
+    <img src="assets/logo.png" alt="结晶百相" style="max-width:300px;border-radius:16px;box-shadow:var(--shadow-md);" onclick="openLightbox('assets/logo.png','结晶百相')">
+  </div>
+
+  <div class="encyclopedia-section">
+    <h3 style="margin-top:0;">关于作品</h3>
+    <p>本书中内容仅作世界观内容简介，并非详细设定集。除上述角色之外，仍有若干名角色受限于篇幅无法呈现。</p>
+    <p>该企划于2022年开始创作，初期世界观搭建由企划主独自完成，至2023年创作团队扩充至2人，历经多次改名终于确定了《结晶百相》这个名字。</p>
+    <p>我们的目标是创作一处能够自主运行的小世界，能够支撑对这个世界观感兴趣的人用这个世界观创作自己的角色与故事线。</p>
+    <p>主创团队并非美术科班出身，角色形象多数来自付费委托，因此可以看到同一个角色不同风格的艺术呈现。我们的作品除了小说正作，也曾尝试过卡牌桌游等其他表现形式，不过多数目前还处在策划方案阶段。</p>
+    <p>感谢各位能够看到这里，同时希望各位能够对我们的作品提出宝贵的意见和建议。</p>
+  </div>
+
+  <div class="encyclopedia-section" style="border-left-color:var(--blue);">
+    <h3 style="color:var(--blue-light);margin-top:0;">想对读者说</h3>
+    <p>生存，便是王道。</p>
+    <p>在这个陨石降临后的世界里，共生者匍匐并驱，身后追逐着灾祸。有人颓靡自顾，有人理性坚定，有人追逐利益与权利。本罪不再为世人所唾，生存便是王道。</p>
+    <p>这个故事讲述的，就是在这个微妙平衡之下，一群人各自寻找出路的故事。</p>
+  </div>
+
+  <div style="text-align:center;margin-top:40px;">
+    <a href="index.html" class="chapter-nav-btn" style="display:inline-block;">← 返回首页</a>
+    <a href="novel.html" class="chapter-nav-btn" style="display:inline-block;margin-left:12px;">开始阅读 →</a>
+  </div>
+</div>
+</div>
+
+<button class="scroll-top" id="scrollTop">↑</button>
+<script src="js/common.js"></script>
+</body>
+</html>
