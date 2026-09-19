@@ -1,0 +1,117 @@
+{
+  "geography": {
+    "mapImage": "assets/maps/world_map.png",
+    "overview": "目前世界已探明的陆地部分由两片大陆组成，率先迎来黎明的被称为“雷凯尼大陆”，另一片则被称为“塔加休大陆”。两片大陆各分布有一座延绵起伏的高山。两片大陆所围成的海称为亚特亚海。",
+    "continents": [
+      {
+        "id": "leikaini",
+        "name": "雷凯尼大陆",
+        "description": "率先迎来黎明的大陆",
+        "landmarks": [
+          { "name": "奥西里火山", "type": "活火山", "description": "雷凯尼大陆最高峰。火山附近出产的宝石经过高温岩浆淬炼，色泽鲜艳夺目，晶莹剔透。" },
+          { "name": "桑多马沙漠", "type": "沙漠", "description": "受奥西里火山影响，火山东部降水稀少，形成最大的沙漠。只有西斯南河两岸有稀少的绿洲。" },
+          { "name": "西斯南河", "type": "河流", "description": "横穿桑多马沙漠的河流，两岸有稀少的绿洲和人烟。" },
+          { "name": "蓬落科雨林", "type": "雨林", "description": "地图上标注的雨林区域。" }
+        ]
+      },
+      {
+        "id": "tagaxiu",
+        "name": "塔加休大陆",
+        "description": "另一片大陆",
+        "landmarks": [
+          { "name": "新卡吉纳峰", "type": "雪山", "description": "山顶永远覆盖积雪，最高处比奥西里火山高出很多。雪山之下是盘旋交错的优质矿脉，提供世界矿物总需求量的80%以上。雪山融水沿地下河汇聚形成河流。" },
+          { "name": "维托巴河", "type": "河流", "description": "最大的河流，由新卡吉纳峰雪山融水汇聚形成，以及数十条大大小小的河流。" }
+        ]
+      }
+    ],
+    "seas": [
+      {
+        "id": "yatya",
+        "name": "亚特亚海",
+        "description": "两片大陆所围成的海。河流最终流入亚特亚海。",
+        "landmarks": [
+          { "name": "诺达尔平原", "type": "平原", "description": "河流在海岸处形成的广袤平原，杜兰德尔最为发达的地区之一。" }
+        ]
+      }
+    ],
+    "islands": [
+      {
+        "id": "kemaer",
+        "name": "科麦尔岛",
+        "description": "陨石着陆点化身的岛。重返地表的人们将这座岛视为灾厄的象征。奥瓦顿家族在岛上建城。"
+      }
+    ],
+    "cities": [
+      {
+        "id": "comale",
+        "name": "科麦尔城",
+        "englishName": "Comale",
+        "description": "在奥瓦顿家族雄厚的财力支撑下，崇尚未来与进步的科麦尔城在岛上诞生。安全检查相当严格，人们难以经由基戈萨港以非法手段登上科麦尔岛。来这座岛旅游是普通人的奢侈，定居只有极少的富商才能付得起。这些财富造就了杜兰德尔的最高学府——科麦尔大学。美丽的校园环境，应有尽有的实验设施，顶尖的教师资源。",
+        "faction": "institute"
+      },
+      {
+        "id": "besongr",
+        "name": "比桑尔城",
+        "englishName": "Besongr",
+        "description": "杜兰德尔的发源地。来自比桑尔城的杜兰德尔凭借出色的战略计划将其余组织划入麾下。奥瓦顿家族来自此城。",
+        "faction": null
+      },
+      {
+        "id": "gegoxa",
+        "name": "基戈萨港",
+        "englishName": "Gegoxa",
+        "description": "位于新卡吉娜峰脚下，坐拥无数优质矿脉，适合重工业发展。几乎所有的大型机械与军用器械都产自此地。这片土地上的一部分人自称“最终阵线”，携带大量工业技术转移至新卡吉娜峰另一侧。城区中分布着若干辐射区，居民出门需随身携带盖格计数器。特纳比睿组织渗透各个角落。",
+        "faction": "tenabirui"
+      },
+      {
+        "id": "nhogetas",
+        "name": "南格塔斯",
+        "englishName": "Nhogetas",
+        "description": "Miners游侠&灯塔小队驻扎地。若干年前原驻扎人员“导体”阵亡，“光纤”叛逃至特纳比睿，后由游侠与灯塔进驻。",
+        "faction": "miners"
+      },
+      {
+        "id": "sarvaniki",
+        "name": "萨尔凡尼基",
+        "englishName": "Sarvaniki",
+        "description": "位于新卡吉纳峰另一侧。地下煤炭矿脉持续燃烧导致常年被毒气与烟尘覆盖。杜兰德尔以雇佣方式管理，管理人员睁一只眼闭一只眼。最终阵线控制萨尔凡尼基后，利用信息屏障与地形屏障背地里积攒力量，组建反叛军等待发动革命。",
+        "faction": "finalfront"
+      },
+      {
+        "id": "kevogelma",
+        "name": "凯各哥尔玛",
+        "englishName": "Kevogelma",
+        "description": "位于杜兰德尔最北端，漫长的冬季造就银装素裹的景象。只有在这里才能见到生活在冰天雪地里的极地生物。陨星生物最后一次出现在人们视野中的地方。人们在北部边境线之外建立起两座边境之塔，用于监视北方雪中常绿针叶林。",
+        "faction": null
+      },
+      {
+        "id": "bora",
+        "name": "博拉角",
+        "englishName": "Bora",
+        "description": "海边城市。陨星生物早期广泛分布的城市之一。Miners爆破&雷管小队驻扎于此。",
+        "faction": "miners"
+      },
+      {
+        "id": "belid",
+        "name": "拜利德",
+        "englishName": "Belid",
+        "description": "Miners寒霜&泡沫小队驻扎于此。特纳比睿干部卡尔文&叶佩斯娅也驻扎于此。",
+        "faction": "miners"
+      },
+      {
+        "id": "chacopari",
+        "name": "迦格帕里",
+        "englishName": "Chacopari",
+        "description": "基戈萨港附近城市。",
+        "faction": null
+      },
+      {
+        "id": "selleja",
+        "name": "塞烈加",
+        "englishName": "Selleja",
+        "description": "萨尔凡尼基附近。皮纳瑞尔在此活动，身份为塞烈加中心医院的义肢植入专家。",
+        "faction": "tenabirui"
+      }
+    ]
+  }
+}
