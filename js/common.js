@@ -71,7 +71,7 @@ async function loadSearchData() {
     (geo.geography?.cities || []).forEach(c => {
       searchData.push({ type: '地名', name: c.name, desc: c.englishName || '', url: 'geography.html#' + c.id });
     });
-    for (let i = 1; i <= 26; i++) {
+    for (let i = 1; i <= 131; i++) {
       searchData.push({ type: '章节', name: '第' + i + '章', desc: '', url: 'novel.html#ch' + i });
     }
   } catch(e) { console.log('Search data load deferred'); }

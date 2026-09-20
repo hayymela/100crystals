@@ -27,3 +27,13 @@ function closeCityModal() {
 }
 
 document.addEventListener('DOMContentLoaded', loadGeography);
+
+// 地图热点点击，复用现有城市弹窗
+document.querySelectorAll('.map‑hotspot').forEach(el=>{
+    el.addEventListener('click',function(){
+        const cityKey = this.dataset.city;
+        if(cityKey){
+            openCityModal(cityKey);
+        }
+    })
+})

@@ -3,7 +3,7 @@
 // ========================================
 
 let novelData = null;
-let currentChapter = 1;
+window.currentChapter = 1;
 
 async function loadNovel() {
   try {
@@ -64,6 +64,8 @@ function renderChapter(chNum) {
   content.innerHTML = `<h2>${chapter.fullTitle}</h2>` +
     paragraphs.map(p => `<p>${p}</p>`).join('');
 
+    content.dataset.chapterId = chNum;
+
   // 更新按钮状态
   document.getElementById('prevChapter').disabled = chNum <= 1;
   document.getElementById('nextChapter').disabled = chNum >= novel.totalChapters;
@@ -76,6 +78,7 @@ function renderChapter(chNum) {
 
   // 关闭移动端侧边栏
   document.getElementById('novelSidebar').classList.remove('active');
+  renderBookmarkMarker();
 }
 
 function goToChapter(num) {
@@ -122,7 +125,7 @@ function restoreSettings() {
 document.addEventListener('keydown', e => {
   if (e.target.tagName === 'INPUT') return;
   if (e.key === 'ArrowLeft' && currentChapter > 1) changeChapter(-1);
-  if (e.key === 'ArrowRight' && currentChapter < 26) changeChapter(1);
+  if (e.key === 'ArrowRight' && novelData && currentChapter < novelData.novel.totalChapters) changeChapter(1);
 });
 
 // 初始化
@@ -130,3 +133,20 @@ document.addEventListener('DOMContentLoaded', () => {
   restoreSettings();
   loadNovel();
 });
+
+/** 根据章节ID直接跳转指定章节（适配现有novel.js） */
+function jumpToChapterId(targetId) {
+    if (!novelData || !novelData.novel || !novelData.novel.chapters) {
+        alert("章节数据尚未加载完成，请稍后再试");
+        return;
+    }
+    // 在章节数组里查找对应id
+    const targetChapter = novelData.novel.chapters.find(c => c.id == targetId);
+    if (!targetChapter) {
+        alert("找不到该书签对应的章节，书签已清除");
+        localStorage.removeItem("novelBookmark");
+        return;
+    }
+    // 直接调用系统已有的渲染章节函数
+    renderChapter(targetId);
+}
