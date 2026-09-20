@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <nav class="navbar">
   <div class="nav-logo" onclick="location.href='index.html'">结晶百相<small>100 Crystals</small></div>
   <div class="nav-links" id="navLinks">
@@ -17,7 +16,7 @@
     <a class="nav-link" href="worldview.html">世界观百科</a>
     <a class="nav-link active" href="characters.html">角色图鉴</a>
     <a class="nav-link" href="geography.html">地理设定</a>
-    <a class="nav-link" href="factions.html">势力阵营</a>
+    <a class="nav-link" href="shop.html">周边商城</a>
     <a class="nav-link" href="about.html">关于</a>
   </div>
   <div class="nav-search">
@@ -28,14 +27,112 @@
   <button class="theme-toggle" id="themeToggle">☾</button>
   <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
-
 <div class="main-content">
 <section class="section">
   <div class="section-header">
     <h2 class="section-title">角色图鉴</h2>
-    <p class="section-subtitle">共24名角色，分阵营展示 · 点击卡片查看详情</p>
+    <p class="section-subtitle">共24名角色，分阵营展示 · 点击卡片查看详情 · 下方可展开阵营介绍</p>
+  </div>
+  <!-- 阵营跳转按钮栏【修复onclick，调用筛选函数filterByFaction】 -->
+  <div class="faction-nav-bar">
+    <button class="faction-nav-btn" onclick="filterByFaction('miners')">
+      <span class="faction-nav-icon">⚖</span>
+      <div class="faction-nav-text">
+        <div class="faction-nav-name">Miners</div>
+        <div class="faction-nav-sub">8人</div>
+      </div>
+    </button>
+    <button class="faction-nav-btn" onclick="filterByFaction('tenabirui')">
+      <span class="faction-nav-icon">☠</span>
+      <div class="faction-nav-text">
+        <div class="faction-nav-name">特纳比睿</div>
+        <div class="faction-nav-sub">10人</div>
+      </div>
+    </button>
+    <button class="faction-nav-btn" onclick="filterByFaction('finalfront')">
+      <span class="faction-nav-icon">✦</span>
+      <div class="faction-nav-text">
+        <div class="faction-nav-name">最终阵线</div>
+        <div class="faction-nav-sub">工业反叛军</div>
+      </div>
+    </button>
+    <button class="faction-nav-btn" onclick="filterByFaction('institute')">
+      <span class="faction-nav-icon">◈</span>
+      <div class="faction-nav-text">
+        <div class="faction-nav-name">地质学研究所</div>
+        <div class="faction-nav-sub">5人</div>
+      </div>
+    </button>
+    <button class="faction-nav-btn" onclick="filterByFaction('all')">
+      <span class="faction-nav-icon">◆</span>
+      <div class="faction-nav-text">
+        <div class="faction-nav-name">显示全部角色</div>
+        <div class="faction-nav-sub">重置筛选</div>
+      </div>
+    </button>
   </div>
 
+  <div class="faction-grid-wrap">
+    <!-- 阵营描述块：这里onclick保留toggleFaction，用来【展开/收起阵营文本块】，这个是正确的 -->
+    <div class="faction-block-wrap collapsed" id="faction-miners">
+      <div class="faction-block-header" onclick="toggleFaction('faction-miners')">
+        <span class="faction-icon">⚖</span>
+        <div style="flex:1;">
+          <div class="faction-name">Miners组织</div>
+          <div class="faction-tag">政府直辖杀手组织</div>
+        </div>
+        <span class="faction-toggle">展开 ▾</span>
+      </div>
+      <div class="faction-block-content">
+        <p class="faction-desc">全部的城市均由名为"杜兰德尔"的世界性政府管辖。最初的共生者有一部分依仗自己的能力无恶不作，杜兰德尔在前期将此类事件公布为恐怖袭击，共生者被以惨痛的代价逮捕，然后被包括但不限于洗脑、精神控制等方式收编成为Miners组织成员。另外一部分的组织成员来自杜兰德尔直辖的福利设施之中，但组织成员无一不经过记忆清除过程并恪守严格的组织教条。</p>
+        <p class="faction-desc">组织的成员两人一组，现有4组小队处于活跃状态。他们的主要职责是封锁共生者相关的消息，清除共生者暴露现场的目击者。待到组织成员扩充之后，可以做到在事发两分钟之内赶到现场并警戒。</p>
+      </div>
+    </div>
+    <div class="faction-block-wrap collapsed" id="faction-tenabirui">
+      <div class="faction-block-header" onclick="toggleFaction('faction-tenabirui')">
+        <span class="faction-icon">☠</span>
+        <div style="flex:1;">
+          <div class="faction-name">特纳比睿</div>
+          <div class="faction-tag">叛逆的重塑者</div>
+        </div>
+        <span class="faction-toggle">展开 ▾</span>
+      </div>
+      <div class="faction-block-content">
+        <p class="faction-desc">基戈萨港向来以混乱著称，早年间的特纳比睿只是港口中一个不起眼的小帮派，但在帮派的一个不起眼的成员被残忍杀害并扔进核废料堆中之后一切都开始改变。陨石的力量赋予她第二次生命，同时赋予了她释放核辐射的恐怖力量。从那之后基戈萨港的地下帮派便只剩特纳比睿一个。</p>
+        <p class="faction-desc">艾可萨尼米兹，便是这个组织头目的名字。她除了控制基戈萨港之外还有更大的目标——控制整个世界。在她看来，共生者拥有强大的力量，就应该成为规则的制定者，而不是像如今这样隐藏于社会的黑暗中。她通过各种方式招揽了若干名共生者，并将其任命为干部。对于拒不配合的人，她的命令则是格杀勿论。</p>
+        <p class="faction-desc">特纳比睿的魔爪遍布整个雷凯尼大陆，除艾可萨本人以外，该组织的共生者人数已经达到了9人，是目前世界上共生者人数最多的组织。</p>
+      </div>
+    </div>
+    <div class="faction-block-wrap collapsed" id="faction-finalfront">
+      <div class="faction-block-header" onclick="toggleFaction('faction-finalfront')">
+        <span class="faction-icon">✦</span>
+        <div style="flex:1;">
+          <div class="faction-name">最终阵线</div>
+          <div class="faction-tag">工业势力反叛组织</div>
+        </div>
+        <span class="faction-toggle">展开 ▾</span>
+      </div>
+      <div class="faction-block-content">
+        <p class="faction-desc">基戈萨港的一部分人不愿意将这座城市的资源拱手让给杜兰德尔，便策划了一场针对大型工业设施的无差别袭击。这群人自称"最终阵线"，携带着大量的工业技术转移至新卡吉纳峰的另一侧。</p>
+        <p class="faction-desc">最终阵线的卧底轻易渗透到萨尔凡尼基当地的管理层之中并策反杜兰德尔派遣的管理人员。利用新卡吉纳峰形成的天然屏障和信息屏障，最终阵线控制萨尔凡尼基后开始背地里积攒力量，吸纳当地原有的试图推翻杜兰德尔统治的人组成了一支反叛军，等待时机发动革命。</p>
+        <p style="font-size:0.85em;color:var(--text-muted);margin-top:12px;">注：企划文档中最终阵线无角色卡，仅有组织描述。</p>
+      </div>
+    </div>
+    <div class="faction-block-wrap collapsed" id="faction-institute">
+      <div class="faction-block-header" onclick="toggleFaction('faction-institute')">
+        <span class="faction-icon">◈</span>
+        <div style="flex:1;">
+          <div class="faction-name">地质学研究所</div>
+          <div class="faction-tag">共生者的净土</div>
+        </div>
+        <span class="faction-toggle">展开 ▾</span>
+      </div>
+      <div class="faction-block-content">
+        <p class="faction-desc">在初代共生者诞生之时，有少数的共生者坚守内心的底线，躲过了Miners布下的天罗地网。然后这些人就搬到有一定自治权的科麦尔城——在那里Miners组织成员不敢轻易放肆——慢慢的形成了第一个自然形成的共生者组织。</p>
+        <p class="faction-desc">在这场风波之后，他们发现想达成完美的和平，就必须让共生者们从人们的记忆中消失。于是他们就开始着手于能够消除共生者能力的药剂的研究。人们发现了藏在陨星生物甲壳内部的液体，并将这种液体命名为"帕拉里斯"。所长拉提尔先生甚至以身试险口服精炼后的这种液体，发现可以抑制共生者体内的力量。</p>
+      </div>
+    </div>
+  </div>
   <!-- 筛选器 -->
   <div class="filter-bar">
     <div class="filter-group">
@@ -55,7 +152,7 @@
       <button class="filter-btn" data-material="火药" onclick="filterCharacters('material','火药')">火药</button>
       <button class="filter-btn" data-material="TNT" onclick="filterCharacters('material','TNT')">TNT</button>
       <button class="filter-btn" data-material="硝化甘油" onclick="filterCharacters('material','硝化甘油')">硝化甘油</button>
-      <button class="filter-btn" data-material="铝" onclick="filterCharacters('material','铝')">铝</button>
+      <button class="filter-btn" data-material="铝" onclick="filterCharacters('material','aluminum')">铝</button>
       <button class="filter-btn" data-material="镁" onclick="filterCharacters('material','镁')">镁</button>
       <button class="filter-btn" data-material="液氮" onclick="filterCharacters('material','液氮')">液氮</button>
       <button class="filter-btn" data-material="聚氨酯" onclick="filterCharacters('material','聚氨酯')">聚氨酯</button>
@@ -76,14 +173,12 @@
       <button class="filter-btn" data-material="银" onclick="filterCharacters('material','银')">银</button>
     </div>
   </div>
-
   <!-- 角色卡片网格 -->
   <div class="card-grid" id="charGrid" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr));">
     <p style="color:var(--text-dim);">正在加载角色数据...</p>
   </div>
 </section>
 </div>
-
 <!-- 角色详情弹窗 -->
 <div class="modal-overlay" id="charModal">
   <div class="modal-content" style="position:relative;">
@@ -91,9 +186,35 @@
     <div class="modal-body" id="modalBody"></div>
   </div>
 </div>
-
 <button class="scroll-top" id="scrollTop">↑</button>
+
 <script src="js/common.js"></script>
-<script src="js/characters.js"></script>
+<script src="js/characters.js?v=2"></script>
+<script>
+/**
+ * 点击阵营导航按钮：执行筛选 + 滚动到角色卡片区域
+ * @param {string} factionKey 阵营key：all / miners / tenabirui / institute / finalfront
+ */
+function filterByFaction(factionKey){
+    filterCharacters('faction', factionKey);
+    const gridDom = document.getElementById('charGrid');
+    if(gridDom){
+        gridDom.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+    }
+    document.querySelectorAll('.filter-bar .filter-btn[data-faction]').forEach(btn=>{
+        if(btn.dataset.faction === factionKey){
+            btn.classList.add('active');
+        }else if(factionKey !== "all"){
+            btn.classList.remove('active');
+        }else{
+            btn.classList.toggle('active', btn.dataset.faction === "all");
+        }
+    })
+}
+</script>
+
 </body>
 </html>

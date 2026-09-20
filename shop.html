@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周边商城 · 结晶百相</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-logo" onclick="location.href='index.html'">结晶百相<small>100 Crystals</small></div>
+  <div class="nav-links" id="navLinks">
+    <a class="nav-link" href="index.html">首页</a>
+    <a class="nav-link" href="novel.html">小说阅读</a>
+    <a class="nav-link" href="worldview.html">世界观百科</a>
+    <a class="nav-link" href="characters.html">角色图鉴</a>
+    <a class="nav-link" href="geography.html">地理设定</a>
+    <a class="nav-link active" href="shop.html">周边商城</a>
+    <a class="nav-link" href="about.html">关于</a>
+  </div>
+  <div class="nav-search">
+    <span class="nav-search-icon">🔍</span>
+    <input type="text" id="navSearch" placeholder="搜索角色/地名/章节...">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+  <button class="theme-toggle" id="themeToggle">☾</button>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="main-content">
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">周边商城</h2>
+    <p class="section-subtitle" id="shopSubtitle">官方授权周边商品 · 点击卡片查看详情与关联角色</p>
+  </div>
+
+  <!-- 筛选器 -->
+  <div class="filter-bar">
+    <div class="filter-group">
+      <span class="filter-label">分类：</span>
+      <div id="categoryFilters" class="filter-btn-group"></div>
+    </div>
+  </div>
+  <div class="filter-bar" style="margin-top:-8px;">
+    <div class="filter-group">
+      <span class="filter-label">状态：</span>
+      <button class="filter-btn active" data-status="all" onclick="filterProducts('status','all')">全部</button>
+      <button class="filter-btn" data-status="onsale" onclick="filterProducts('status','onsale')">在售</button>
+      <button class="filter-btn" data-status="presale" onclick="filterProducts('status','presale')">预售</button>
+      <button class="filter-btn" data-status="soldout" onclick="filterProducts('status','soldout')">售罄</button>
+    </div>
+    <div class="filter-group" style="margin-left:auto;">
+      <span class="filter-label">排序：</span>
+      <button class="filter-btn active" data-sort="default" onclick="sortProducts('default')">默认</button>
+      <button class="filter-btn" data-sort="price-asc" onclick="sortProducts('price-asc')">价格 ↑</button>
+      <button class="filter-btn" data-sort="price-desc" onclick="sortProducts('price-desc')">价格 ↓</button>
+    </div>
+  </div>
+
+  <!-- 商品卡片网格 -->
+  <div class="shop-grid" id="shopGrid">
+    <p style="color:var(--text-dim);">正在加载商品数据...</p>
+  </div>
+</section>
+</div>
+
+<!-- 商品详情弹窗 -->
+<div class="modal-overlay" id="shopModal">
+  <div class="modal-content" style="position:relative;">
+    <button class="modal-close" onclick="closeShopModal()">✕</button>
+    <div class="modal-body" id="shopModalBody"></div>
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTop">↑</button>
+<script src="js/common.js"></script>
+<script src="js/shop.js?v=2"></script>
+</body>
+</html>

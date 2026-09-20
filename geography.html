@@ -16,8 +16,8 @@
     <a class="nav-link" href="novel.html">小说阅读</a>
     <a class="nav-link" href="worldview.html">世界观百科</a>
     <a class="nav-link" href="characters.html">角色图鉴</a>
-    <a class="nav-link active" href="geography.html">地理设定</a>
-    <a class="nav-link" href="factions.html">势力阵营</a>
+    <a class="nav-link" href="geography.html">地理设定</a>
+    <a class="nav-link" href="shop.html">周边商城</a>
     <a class="nav-link" href="about.html">关于</a>
   </div>
   <div class="nav-search">
@@ -36,11 +36,21 @@
     <p class="section-subtitle">两片大陆、亚特亚海、科麦尔岛 · 点击地图放大 · 点击城市查看详情</p>
   </div>
 
-  <!-- 世界地图 -->
-  <div class="map-container" onclick="openLightbox('assets/maps/world_map.png','世界地图')">
-    <img class="map-img" src="assets/maps/world_map.png" alt="世界地图">
-    <div class="map-overlay"><span>📍 点击放大查看世界地图</span></div>
-  </div>
+  <!-- 世界地图 · 背景底图 + 点击热区 -->
+<div class="map-hot-container" style="background-image:url('assets/maps/world_map.png');">
+    <!-- 点击热点 data‑city对应城市key，和openCityModal参数一致 -->
+    <div class="map-hotspot" data-city="comale" title="科麦尔城"></div>
+    <div class="map-hotspot" data-city="besongr" title="比桑尔城"></div>
+    <div class="map-hotspot" data-city="gegoxa" title="基戈萨港"></div>
+    <div class="map-hotspot" data-city="nhogetas" title="南格塔斯"></div>
+    <div class="map-hotspot" data-city="sarvaniki" title="萨尔凡尼基"></div>
+    <div class="map-hotspot" data-city="kevogelma" title="凯各哥尔玛"></div>
+    <div class="map-hotspot" data-city="bora" title="博拉角"></div>
+    <div class="map-hotspot" data-city="belid" title="拜利德"></div>
+    <div class="map-hotspot" data-city="selleja" title="塞烈加"></div>
+    <div class="map-hotspot" data-city="chacopari" title="迦格帕里"></div>
+    <div class="map-tip">📍点击地图上标记点，查看地区详情</div>
+</div>
 
   <!-- 大陆总览 -->
   <div class="encyclopedia-section">
@@ -95,6 +105,7 @@
       <div class="geo-card" onclick="openCityModal('bora')"><h4>博拉角</h4><p>海边城市，爆破&雷管驻扎地。</p><p class="geo-card-en">Bora</p></div>
       <div class="geo-card" onclick="openCityModal('belid')"><h4>拜利德</h4><p>寒霜&泡沫、卡尔文&叶佩斯娅驻扎地。</p><p class="geo-card-en">Belid</p></div>
       <div class="geo-card" onclick="openCityModal('selleja')"><h4>塞烈加</h4><p>皮纳瑞尔在此活动，中心医院。</p><p class="geo-card-en">Selleja</p></div>
+      <div class="geo-card" onclick="openCityModal('chacopari')"><h4>迦格帕里</h4><p>基戈萨港附近城市。</p><p class="geo-card-en">Chacopari</p></div>
     </div>
   </div>
 </section>

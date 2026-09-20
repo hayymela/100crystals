@@ -18,7 +18,7 @@
     <a class="nav-link" href="worldview.html">世界观百科</a>
     <a class="nav-link" href="characters.html">角色图鉴</a>
     <a class="nav-link" href="geography.html">地理设定</a>
-    <a class="nav-link" href="factions.html">势力阵营</a>
+    <a class="nav-link" href="shop.html">周边商城</a>
     <a class="nav-link" href="about.html">关于</a>
   </div>
   <div class="nav-search">
@@ -35,7 +35,7 @@
 
 <!-- 侧边章节目录 -->
 <aside class="novel-sidebar" id="novelSidebar">
-  <div class="novel-sidebar-title">章节目录 · 26章</div>
+  <div class="novel-sidebar-title">章节目录 · 131章</div>
   <ul class="chapter-list" id="chapterList"></ul>
 </aside>
 
@@ -59,6 +59,12 @@
     <div class="control-group" style="margin-left:auto;">
       <button class="control-btn" id="sidebarToggle" onclick="toggleSidebar()" title="目录">☰</button>
     </div>
+    <!-- ==========新增书签按钮组 ========== -->
+    <div class="control-group">
+        <button class="control-btn" onclick="addBookmark()" title="保存当前阅读位置">添加书签</button>
+        <button class="control-btn" onclick="gotoBookmark()" title="跳转到书签位置">跳转书签</button>
+        <button class="control-btn" onclick="clearBookmark()" title="清除保存的书签">清除书签</button>
+    </div>
   </div>
 
   <!-- 章节内容 -->
@@ -79,5 +85,122 @@
 <button class="scroll-top" id="scrollTop">↑</button>
 <script src="js/common.js"></script>
 <script src="js/novel.js"></script>
+<script>
+/**
+ * 书签功能【修复版】
+ * 从DOM读取data‑chapter‑id，规避全局变量名错误；解析损坏自动清理脏数据
+ */
+
+// 保存书签：从dom读取章节id
+function addBookmark(){
+  const chapterDom = document.querySelector(".novel-content[data-chapter-id]");
+  if(!chapterDom){
+    alert("暂未加载章节，无法添加书签");
+    return;
+  }
+  const chapId = chapterDom.dataset.chapterId;
+  const scrollY = window.scrollY;
+  const bookmarkData = {
+    chapterId: chapId,
+    scrollPos: scrollY
+  };
+  localStorage.setItem("novelBookmark", JSON.stringify(bookmarkData));
+  alert("✅书签已保存！");
+  renderBookmarkMarker(); // 新增：更新目录书签标记
+}
+
+// 跳转书签
+function gotoBookmark(){
+  const raw = localStorage.getItem("novelBookmark");
+  if(!raw){
+    alert("暂无保存的书签");
+    return;
+  }
+  let bm;
+  try{
+    bm = JSON.parse(raw);
+  }catch(e){
+    // JSON解析失败，自动删除损坏数据
+    localStorage.removeItem("novelBookmark");
+    alert("书签数据已损坏，已自动清除，请重新添加书签");
+    return;
+  }
+
+  // 校验书签字段完整性
+  if(!bm || !bm.chapterId || bm.scrollPos === undefined){
+    localStorage.removeItem("novelBookmark");
+    alert("书签数据无效，已自动清除，请重新添加书签");
+    return;
+  }
+
+  const chapterDom = document.querySelector(".novel-content[data-chapter-id]");
+  const currentId = chapterDom?.dataset.chapterId;
+
+  if(currentId === bm.chapterId){
+    window.scrollTo({top:bm.scrollPos, behavior:"smooth"});
+  }else{
+    jumpToChapterId(Number(bm.chapterId));
+    setTimeout(()=>{
+      window.scrollTo({top:bm.scrollPos, behavior:"smooth"});
+    },450);
+  }
+}
+
+// 清除书签
+function clearBookmark(){
+  localStorage.removeItem("novelBookmark");
+  renderBookmarkMarker(); //清除书签后，移除目录标记
+  alert("🗑书签已清除");
+}
+
+// 页面加载完成自动恢复书签
+window.addEventListener('load',()=>{
+  const raw = localStorage.getItem("novelBookmark");
+  if(!raw) return;
+  let bm;
+  try{
+    bm = JSON.parse(raw);
+  }catch(e){
+    localStorage.removeItem("novelBookmark");
+    console.log("自动清理损坏书签",e);
+    return;
+  }
+  if(!bm || !bm.chapterId) return;
+
+  setTimeout(()=>{
+    jumpToChapterId(Number(bm.chapterId));
+    setTimeout(()=>{
+      window.scrollTo({top:bm.scrollPos, behavior:"smooth"});
+    },450);
+  },300);
+  renderBookmarkMarker(); //页面加载时先渲染一次标记
+})
+/**
+ * 渲染侧边目录的书签⭐标记
+ */
+function renderBookmarkMarker() {
+  const raw = localStorage.getItem("novelBookmark");
+  // 1. 先清除所有章节条目上旧的书签标记
+  document.querySelectorAll('.chapter-item').forEach(item => {
+    // 移除已有的⭐符号
+    item.innerHTML = item.innerHTML.replace(/ ⭐$/, '');
+  });
+
+  if (!raw) return; // 没有书签，直接退出
+
+  try {
+    const bm = JSON.parse(raw);
+    const bookmarkChapterId = bm.chapterId;
+    // 找到目录里data-ch等于书签章节id的章节项
+    const targetItem = document.querySelector(`.chapter-item[data-ch="${bookmarkChapterId}"]`);
+    if(targetItem){
+      // 在章节文字末尾追加⭐标记
+      targetItem.innerText += " ⭐";
+    }
+  } catch(e) {
+    console.log("书签标记渲染失败",e);
+  }
+}
+</script>
 </body>
 </html>
