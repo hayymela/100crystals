@@ -1,0 +1,589 @@
+{
+  "products": [
+    {
+      "id": "p001",
+      "name": "《结晶百相》科麦尔岛篇",
+      "category": "小说",
+      "price": 49,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 30,
+      "image": "assets/shop/100crystals_comale.webp",
+      "description": "《结晶百相》小说1-26章，主要讲述发生在科麦尔岛上的故事。",
+      "specs": [
+        "页数：208页",
+        "装帧：锁线精装，封面铜版纸哑膜。",
+        "尺寸：A5（148mm*210mm）"
+      ],
+      "characterIds": [
+        "anathomia",
+        "grant",
+        "velva",
+        "rateal",
+        "gemnay",
+        "sirdeg",
+        "itinerato",
+        "borangroa"
+      ],
+      "tags": [
+        "小说"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/100crystals_comale.webp",
+          "caption": "商品主图",
+          "description": "《结晶百相》科麦尔岛篇的主视觉图。"
+        },
+        {
+          "url": "assets/shop/100crystals_comale.webp",
+          "caption": "内页展示",
+          "description": "《结晶百相》科麦尔岛篇的内页展示图。"
+        },
+        {
+          "url": "assets/shop/100crystals_comale.webp",
+          "caption": "内页展示",
+          "description": "《结晶百相》科麦尔岛篇的内页展示图。"
+        }
+      ]
+    },
+    {
+      "id": "p002",
+      "name": "薇尔瓦 · 灯光聚焦于你",
+      "category": "镭射票",
+      "price": 12,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 120,
+      "image": "assets/shop/laserticket_1_1.webp",
+      "description": "薇尔瓦镭射票《灯光聚焦于你》，描绘了薇尔瓦在录音室创作音乐的景象。",
+      "specs": [
+        "尺寸：50mm*150mm",
+        "材质：双面对裱",
+        "工艺：镭射烫银"
+      ],
+      "characterIds": [
+        "velva"
+      ],
+      "tags": [
+        "镭射票",
+        "地质学研究所"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/laserticket_1_1.webp",
+          "caption": "镭射票正面",
+          "description": "薇尔瓦《灯光聚焦于你》镭射票的正面展示图。"
+        },
+        {
+          "url": "assets/shop/laserticket_1_2.webp",
+          "caption": "镭射票背面",
+          "description": "薇尔瓦《灯光聚焦于你》镭射票的背面展示图。"
+        }
+      ]
+    },
+    {
+      "id": "p003",
+      "name": "拉提尔 · 午后休憩时间",
+      "category": "镭射票",
+      "price": 15,
+      "originalPrice": 50,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 8,
+      "image": "assets/shop/laserticket_2_1.webp",
+      "description": "拉提尔镭射票《午后休憩时间》，描绘了拉提尔在咖啡馆午休的景象。",
+      "specs": [
+        "尺寸：70mm*210mm",
+        "材质：双面对裱",
+        "工艺：镭射烫银"
+      ],
+      "characterIds": [
+        "rateal"
+      ],
+      "tags": [
+        "镭射票",
+        "地质学研究所"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/laserticket_2_1.webp",
+          "caption": "镭射票正面",
+          "description": "拉提尔镭射票《午后休憩时间》正面展示图。"
+        },
+        {
+          "url": "assets/shop/laserticket_2_2.webp",
+          "caption": "镭射票背面",
+          "description": "拉提尔镭射票《午后休憩时间》背面展示图。"
+        }
+      ]
+    },
+    {
+      "id": "p004",
+      "name": "特纳比睿 · 干部群像明信片套组",
+      "category": "明信片",
+      "price": 19,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 100,
+      "image": "assets/shop/postcard_tenabirui_1.webp",
+      "description": "特纳比睿十大干部的群像明信片套组，正面为角色侧，展示角色形象与少量信息；背面为自由书写区，以机密档案风格呈现。",
+      "specs": [
+        "容量：10张",
+        "材质：珠光纸",
+        "规格：148mm*100mm"
+      ],
+      "characterIds": [
+        "exanimitz",
+        "ivansekt",
+        "jeyo",
+        "krolondam",
+        "farbeliki",
+        "kestro",
+        "karwin",
+        "yhepsa",
+        "grant",
+        "penarel"
+      ],
+      "tags": [
+        "明信片",
+        "特纳比睿",
+        "在售"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/postcard_tenabirui_1.webp",
+          "caption": "明信片正面",
+          "description": "特纳比睿 · 干部明信片套组的正面展示图。"
+        },
+        {
+          "url": "assets/shop/postcard_tenabirui_2.webp",
+          "caption": "明信片正面",
+          "description": "干部们的战斗姿态合集，每位干部的能力特性一览无余。"
+        },
+        {
+          "url": "assets/characters/tenabirui3.webp",
+          "caption": "明信片正面",
+          "description": "能力展示细节图，铀、氯气、石英等不同共生者的力量对比。"
+        },
+        {
+          "url": "assets/characters/tenabirui4.webp",
+          "caption": "明信片正面",
+          "description": "基戈萨港据点场景，特纳比睿的大本营全貌。"
+        },
+        {
+          "url": "assets/characters/tenabirui5.webp",
+          "caption": "明信片正面",
+          "description": "干部概念设计稿，展示了角色从草稿到定稿的演变过程。"
+        }
+      ]
+    },
+    {
+      "id": "p005",
+      "name": "拉提尔烫银镭射徽章",
+      "category": "徽章",
+      "price": 10,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 20,
+      "image": "assets/shop/badge_1.webp",
+      "description": "拉提尔烫银镭射徽章，整体采用素面双闪镭射工艺，表面以浮雕烫银工艺展现个人签名。",
+      "specs": [
+        "尺寸：58mm",
+        "工艺：素面镭射，浮雕烫银"
+      ],
+      "characterIds": [
+        "rateal"
+      ],
+      "tags": [
+        "徽章",
+        "地质学研究所"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/badge_1.webp",
+          "caption": "商品主图",
+          "description": "拉提尔烫银镭射徽章的主视觉展示图。"
+        }
+      ]
+    },
+    {
+      "id": "p006",
+      "name": "格米娜依烫银镭射徽章",
+      "category": "徽章",
+      "price": 10,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 20,
+      "image": "assets/shop/badge_2.webp",
+      "description": "格米娜依烫银镭射徽章，整体采用素面双闪镭射工艺，表面以浮雕烫银工艺展现个人签名。",
+      "specs": [
+       "尺寸：58mm",
+        "工艺：素面镭射，浮雕烫银"
+      ],
+      "characterIds": [
+        "gemnay"
+      ],
+      "tags": [
+        "徽章",
+        "地质学研究所"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/badge_2.webp",
+          "caption": "商品主图",
+          "description": "格米娜依烫银镭射徽章的主视觉展示图。"
+        }
+      ]
+    },
+    {
+      "id": "p007",
+      "name": "阿娜托米亚烫银镭射徽章",
+      "category": "徽章",
+      "price": 10,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 20,
+      "image": "assets/shop/badge_3.webp",
+      "description": "阿娜托米亚烫银镭射徽章，整体采用素面双闪镭射工艺，表面以浮雕烫银工艺展现个人签名。",
+      "specs": [
+     "尺寸：58mm",
+        "工艺：素面镭射，浮雕烫银"
+      ],
+      "characterIds": [
+        "anathomia"
+      ],
+      "tags": [
+        "徽章",
+        "地质学研究所"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/badge_3.webp",
+          "caption": "商品主图",
+          "description": "阿娜托米亚烫银镭射徽章的主视觉展示图。"
+        }
+      ]
+    },
+    {
+      "id": "p008",
+      "name": "西尔狄歌烫银镭射徽章",
+      "category": "徽章",
+      "price": 10,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 20,
+      "image": "assets/shop/badge_4.webp",
+      "description": "西尔狄歌烫银镭射徽章，整体采用素面双闪镭射工艺，表面以浮雕烫银工艺展现个人签名。",
+      "specs": [     
+        "尺寸：58mm",
+        "工艺：素面镭射，浮雕烫银"
+      ],
+      "characterIds": [
+        "sirdeg"
+      ],
+      "tags": [
+        "徽章",
+        "地质学研究所"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/badge_4.webp",
+          "caption": "商品主图",
+          "description": "西尔狄歌烫银镭射徽章的主视觉展示图。"
+        }
+      ]
+    },
+    {
+      "id": "p009",
+      "name": "薇尔瓦烫银镭射徽章",
+      "category": "徽章",
+      "price": 10,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 20,
+      "image": "assets/shop/badge_5.webp",
+      "description": "薇尔瓦烫银镭射徽章，整体采用素面双闪镭射工艺，表面以浮雕烫银工艺展现个人签名。",
+      "specs": [
+         "尺寸：58mm",
+        "工艺：素面镭射，浮雕烫银"
+      ],
+      "characterIds": [
+        "velva"
+      ],
+      "tags": [
+      "徽章",
+        "地质学研究所"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/badge_5.webp",
+          "caption": "商品主图",
+          "description": "薇尔瓦烫银镭射徽章的主视觉展示图。"
+        }
+      ]
+    },
+    {
+      "id": "p010",
+      "name": "格兰特烫银镭射徽章",
+      "category": "徽章",
+      "price": 10,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 20,
+      "image": "assets/shop/badge_6.webp",
+      "description": "格兰特烫银镭射徽章，整体采用素面双闪镭射工艺，表面以浮雕烫银工艺展现个人签名。",
+      "specs": [
+           "尺寸：58mm",
+        "工艺：素面镭射，浮雕烫银"
+      ],
+      "characterIds": [
+        "grant"
+      ],
+      "tags": [
+        "徽章",
+        "特纳比睿"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/badge_6.webp",
+          "caption": "商品主图",
+          "description": "格兰特烫银镭射徽章的主视觉展示图。"
+        }
+      ]
+    },
+    {
+      "id": "p011",
+      "name": "伊钦内拉图烫银镭射徽章",
+      "category": "徽章",
+      "price": 10,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 20,
+      "image": "assets/shop/badge_7.webp",
+      "description": "伊钦内拉图烫银镭射徽章，整体采用素面双闪镭射工艺，表面以浮雕烫银工艺展现个人签名。",
+      "specs": [
+         "尺寸：58mm",
+        "工艺：素面镭射，浮雕烫银"
+      ],
+      "characterIds": [
+        "itinerato"
+      ],
+      "tags": [
+        "徽章",
+        "miners"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/badge_7.webp",
+          "caption": "商品主图",
+          "description": "伊钦内拉图烫银镭射徽章的主视觉展示图。"
+        }
+      ]
+    },
+    {
+      "id": "p012",
+      "name": "波朗沃拉烫银镭射徽章",
+      "category": "徽章",
+      "price": 10,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 20,
+      "image": "assets/shop/badge_8.webp",
+      "description": "波朗沃拉烫银镭射徽章，整体采用素面双闪镭射工艺，表面以浮雕烫银工艺展现个人签名。",
+      "specs": [
+         "尺寸：58mm",
+        "工艺：素面镭射，浮雕烫银"
+      ],
+      "characterIds": [
+        "borangroa"
+      ],
+      "tags": [
+         "徽章",
+        "miners"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/badge_8.webp",
+          "caption": "商品主图",
+          "description": "波朗沃拉烫银镭射徽章的主视觉展示图。"
+        }
+      ]
+    },
+    {
+      "id": "p013",
+      "name": "拉提尔白瓷镭射徽章",
+      "category": "徽章",
+      "price": 10,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 20,
+      "image": "assets/shop/badge_12.webp",
+      "description": "拉提尔白瓷镭射徽章，整体采用素面双闪镭射工艺。",
+      "specs": [
+         "尺寸：58mm",
+        "工艺：素面镭射，白瓷闪底"
+      ],
+      "characterIds": [
+        "rateal"
+      ],
+      "tags": [
+         "徽章",
+        "地质学研究所"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/badge_12.webp",
+          "caption": "商品主图",
+          "description": "拉提尔白瓷镭射徽章的主视觉展示图。"
+        }
+      ]
+    },
+    {
+      "id": "p014",
+      "name": "格米娜依镭射徽章",
+      "category": "徽章",
+      "price": 10,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 20,
+      "image": "assets/shop/badge_13.webp",
+      "description": "格米娜依白瓷镭射徽章，整体采用素面双闪镭射工艺。",
+      "specs": [
+         "尺寸：58mm",
+        "工艺：素面镭射，白瓷闪底"
+      ],
+      "characterIds": [
+        "gemnay"
+      ],
+      "tags": [
+         "徽章",
+        "地质学研究所"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/badge_13.webp",
+          "caption": "商品主图",
+          "description": "格米娜依白瓷镭射徽章的主视觉展示图。"
+        }
+      ]
+    },{
+      "id": "p015",
+      "name": "阿娜托米亚白瓷镭射徽章",
+      "category": "徽章",
+      "price": 10,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 20,
+      "image": "assets/shop/badge_11.webp",
+      "description": "阿娜托米亚白瓷镭射徽章，整体采用素面双闪镭射工艺。",
+      "specs": [
+         "尺寸：58mm",
+        "工艺：素面镭射，白瓷闪底"
+      ],
+      "characterIds": [
+        "anathomia"
+      ],
+      "tags": [
+         "徽章",
+        "地质学研究所"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/badge_11.webp",
+          "caption": "商品主图",
+          "description": "阿娜托米亚白瓷镭射徽章的主视觉展示图。"
+        }
+      ]
+    },{
+      "id": "p016",
+      "name": "西尔狄歌白瓷镭射徽章",
+      "category": "徽章",
+      "price": 10,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 20,
+      "image": "assets/shop/badge_10.webp",
+      "description": "西尔狄歌白瓷镭射徽章，整体采用素面双闪镭射工艺。",
+      "specs": [
+         "尺寸：58mm",
+        "工艺：素面镭射，白瓷闪底"
+      ],
+      "characterIds": [
+        "sirdeg"
+      ],
+      "tags": [
+         "徽章",
+        "地质学研究所"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/badge_10.webp",
+          "caption": "商品主图",
+          "description": "西尔狄歌白瓷镭射徽章的主视觉展示图。"
+        }
+      ]
+    },{
+      "id": "p017",
+      "name": "薇尔瓦白瓷镭射徽章",
+      "category": "徽章",
+      "price": 10,
+      "originalPrice": null,
+      "currency": "CNY",
+      "status": "onsale",
+      "stock": 20,
+      "image": "assets/shop/badge_9.webp",
+      "description": "薇尔瓦白瓷镭射徽章，整体采用素面双闪镭射工艺。",
+      "specs": [
+         "尺寸：58mm",
+        "工艺：素面镭射，白瓷闪底"
+      ],
+      "characterIds": [
+        "velva"
+      ],
+      "tags": [
+         "徽章",
+        "地质学研究所"
+      ],
+      "images": [
+        {
+          "url": "assets/shop/badge_9.webp",
+          "caption": "商品主图",
+          "description": "薇尔瓦白瓷镭射徽章的主视觉展示图。"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    "全部",
+    "小说",
+    "立牌",
+    "徽章",
+    "海报",
+    "设定集",
+    "镭射票",
+    "饰品",
+    "服饰",
+    "挂件",
+    "纸质"
+  ],
+  "statusLabels": {
+    "onsale": "在售",
+    "soldout": "售罄",
+    "presale": "预售"
+  }
+}
